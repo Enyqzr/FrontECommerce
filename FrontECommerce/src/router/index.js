@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from "@/components/Home.vue";
+import Product from "@/components/Product.vue";
+import Service from "@/components/Service.vue";
+import Connexion from "@/components/Connexion.vue";
 
 
 const routes = [
@@ -8,6 +11,22 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/products',
+    name: 'Products',
+    component: Product
+  },
+  {
+    path: '/connexion',
+    name: 'Connexion',
+    component: Connexion
+  },
+  {
+    path: '/services',
+    name: 'Service',
+    component: Service
+  }
+
 ]
 
 const router = createRouter({
@@ -17,6 +36,21 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/products',
+      name: 'products',
+      component: Product
+    },
+    {
+      path: '/connexion',
+      name: 'Connexion',
+      component: Connexion
+    },
+    {
+      path: '/services',
+      name: 'Service',
+      component: Service
     },
     {
       path: '/about',

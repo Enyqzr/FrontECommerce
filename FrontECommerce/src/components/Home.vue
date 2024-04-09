@@ -30,7 +30,7 @@
     </div>
 
     <div class="text-center">
-      <h1 class="mt-4 font-bold text-2x1">Nos Services</h1>
+      <h1 class="mt-4 font-bold text-2x1">Des services eco-responsables ? <br>C'est possible !!</h1>
     </div>
     <div class="flex justify-center mt-8">
       <div class="flex flex-wrap justify-center">
@@ -52,6 +52,22 @@
             </template>
           </div>
         </template>
+        <div class="text-center">
+          <h1 class="mt-4 font-bold text-2xl">Derniers Posts</h1>
+        </div>
+        <div class="flex justify-center mt-8">
+          <div class="flex flex-wrap justify-center">
+            <div v-for="(post, index) in latestPosts" :key="index" class="card w-full md:w-96 bg-base-100 shadow-xl md:m-4 mb-4">
+              <h2 class="card-title items-center text-center">{{ post.name }}</h2>
+              <figure class="px-10 pt-10">
+                <img :src="post.image" :alt="post.name" class="rounded-xl"/>
+              </figure>
+              <div class="card-body items-center text-center">
+                <p>{{ post.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -74,6 +90,9 @@ export default {
       services: [
         {name: 'Lavage Voiture', description: 'Plus ou moins tout compris', price: 20, image: lavageVoiture },
         {name: 'Location de velos', description: 'Ecologique et pratique !', price: 6, image: locaVelo},
+      ],
+      latestPosts : [
+        {name: 'La charlotte alimentaire : Une revolution', description: `Les charlottes alimentaire sont désormais partout, dans nos cuisines, dans nos écoles, dans nos magasins. C'est tout simplement devenu un must have !`, image: charlotteAlimentaireImage}
       ]
     };
   },
