@@ -3,6 +3,7 @@ import Home from "@/components/Home.vue";
 import Product from "@/components/Product.vue";
 import Service from "@/components/Service.vue";
 import Connexion from "@/components/Connexion.vue";
+import Panier from "@/components/Panier.vue";
 
 
 const routes = [
@@ -51,6 +52,11 @@ const router = createRouter({
       path: '/services',
       name: 'Service',
       component: Service
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Panier
     },
     {
       path: '/about',

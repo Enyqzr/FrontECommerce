@@ -92,7 +92,7 @@ export default {
         {name: 'Location de velos', description: 'Ecologique et pratique !', price: 6, image: locaVelo},
       ],
       latestPosts : [
-        {name: 'La charlotte alimentaire : Une revolution', description: `Les charlottes alimentaire sont désormais partout, dans nos cuisines, dans nos écoles, dans nos magasins. C'est tout simplement devenu un must have !`, image: charlotteAlimentaireImage}
+        {name: 'La charlotte alimentaire : Une revolution', description: `Les charlottes alimentaires sont désormais partout, dans nos cuisines, dans nos écoles, dans nos magasins. C'est tout simplement devenu un must have !`, image: charlotteAlimentaireImage}
       ]
     };
   },

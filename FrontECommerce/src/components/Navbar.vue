@@ -1,9 +1,11 @@
 <template>
   <div class="navbar bg-base-100 flex items-center justify-between">
     <div>
+      <RouterLink to="/">
       <a class="btn btn-ghost text-xl">
         <img src="@/assets/logo_greenhub.webp" alt="Logo GreenHub" class="h-6">
       </a>
+      </RouterLink>
     </div>
     <div class="navbar-start">
       <div class="dropdown">
@@ -12,19 +14,23 @@
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li><a>Acceuil</a></li>
+          <router-link to="/products">
           <li><a>Product</a></li>
+          </router-link>
           <li><a>Services</a></li>
           <li><a>Blogs</a></li>
         </ul>
       </div>
     </div>
     <div class="flex-none">
-      <button class="btn btn-square btn-ghost">
+      <RouterLink to="/connexion"><button class="btn btn-square btn-ghost">
         <i-ph-user></i-ph-user>
-      </button>
+      </button></RouterLink>
+      <RouterLink to="/cart">
       <button class="btn btn-square btn-ghost">
         <i-ph-shopping-cart-simple></i-ph-shopping-cart-simple>
       </button>
+      </RouterLink>
     </div>
   </div>
 </template>
