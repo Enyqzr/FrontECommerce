@@ -20,6 +20,12 @@
       <div class="form-control mt-6">
         <button class="btn btn-primary">Connexion</button>
       </div>
+      <div class="form-control">
+        <label class="label">
+          <input type="checkbox" required>
+          <span class="label-text">J'accepte les conditions générales et la politique de confidentialité</span>
+        </label>
+      </div>
     </form>
   </div>
   <h1 class="text-center">Pas encore de compte ?</h1>
