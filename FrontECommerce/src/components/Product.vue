@@ -11,12 +11,12 @@
     </div>
     <div class="product-list">
       <div v-for="product in products" :key="product.id" class="product-card">
-        <img :src="product.image" :alt="product.name" class="product-image">
+        <img :src="product.image" :alt="product.title" class="product-image">
         <div class="product-details">
-          <h2>{{ product.name }}</h2>
+          <h2>{{ product.title }}</h2>
           <p>{{ product.description }}</p>
           <div class="buttons">
-            <button @click="addToCart(product)" class="btn btn-primary">Ajouter au panier {{product.price}} €</button>
+            <button @click="" class="btn btn-primary">Ajouter au panier {{product.price}} €</button>
           </div>
         </div>
       </div>
@@ -25,21 +25,21 @@
 </template>
 
 <script>
-import cubeVaisselleImage from "@/assets/cube_vaisselle.webp";
-import charlotteAlimentaireImage from "@/assets/charlotte_alimentaire.webp";
+import {useStore} from '@/stores/store.js';
+import { onMounted } from 'vue'
+ export default {
 
-export default {
-  data() {
-    return {
-      products: [
-        { name: 'Cube Vaisselle - Savon Solide ', description: '', price: 6, image: cubeVaisselleImage },
-        { name: 'Charlotte Alimentaire - Charlotte alimentaire en tissu ', description: '', price: 6, image: charlotteAlimentaireImage },
-      ]
-    };
-  },
+   setup() {
+     const store = useStore();
+     onMounted(()=>{
+       store.getProducts()
+     })
+     return {
+       products: store.products,
+     }
+ }
 }
 </script>
-
 <style scoped>
 
 .search-bar-wrapper {
